@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: IranSans;
+    src: url('../fonts/IranSans/FontsFree-Net-ir_sans.ttf');
+}
+
+@font-face {
+    font-family: diba;
+    src: url('../fonts/Diba/Diba.ttf');
+}
+
+@layer base {
+    * {
+        direction: rtl;
+        text-align: right;
+        font-family: IranSans;
+    }
+}
+
+@layer components {
+    .heading-text {
+        @apply relative mb-10 text-2xl text-center text-gray-700 dark:text-gray-200 sm:text-3xl font-diba;
+    }
+
+    .heading-text::after {
+        content: '';
+        width: 10rem;
+        max-width: 100%;
+        height: 1rem;
+        position: absolute;
+        top: 90%;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        @apply border-b border-gray-400 dark:border-bottom-heading-text-dark-mode;
+    }
+
+    .border-bottom-heading-text-dark-mode {
+        border-color: rgb(209, 213, 219);
+    }
+
+    .heading-text::before {
+        content: '';
+        position: absolute;
+        top: 90%;
+        width: 4rem;
+        height: 1rem;
+        border-bottom: 4px solid rgb(37, 99, 235);
+        z-index: 1;
+        margin-right: auto;
+        margin-left: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .heading-text-long::before {
+        width: 7rem;
+    }
+
+    .heading-text-long::after {
+        width: 16rem;
+    }
+
+    .font-diba {
+        font-family: diba;
+    }
+
+    .loading {
+        position: fixed;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #0093e9;
+        background-image: linear-gradient(287deg, #29323c, #485563);
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading div {
+        max-width: 100%;
+        width: 60px;
+        height: 60px;
+        border: 6px solid #106eea;
+        border-top-color: #e2eefd;
+        border-radius: 50%;
+        animation: loading 1s linear infinite;
+        -webkit-animation: loading 1s linear infinite;
+    }
+
+    section.lazy::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #contact_item:hover .contact_icon {
+        @apply text-gray-200 bg-blue-600 dark:text-gray-300;
+    }
+
+    .form-control {
+        padding: 0.25rem 0.75rem;
+        @apply w-full my-3 bg-gray-100 border border-gray-400 rounded outline-none focus:shadow-lg focus:border-0 focus:ring focus:ring-blue-400 dark:bg-transparent dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-600;
+        font-size: 15px;
+    }
+
+    .direction-ltr {
+        direction: ltr;
+    }
+
+    .skill-badge {
+        @apply relative text-gray-100 dark:skill-badge-dark-color;
+        border-radius: 10rem;
+        padding: 0.15rem 0.5rem;
+        font-size: 1.1rem;
+        z-index: 1;
+    }
+
+    .skill-badge-dark-color {
+        color: #e3e7f0;
+    }
+
+    .skill-badge::before {
+        content: '';
+        @apply absolute top-0 bottom-0 left-0 right-0 w-full h-full dark:opacity-20;
+        background: #6c757d;
+        z-index: -1;
+        border-radius: 10rem;
+    }
+
+    .skill-badge-red::before {
+        @apply bg-yellow-800 dark:skill-badge-red-dark-background;
+    }
+
+    .skill-badge-red-dark-background {
+        background: #ff5300;
+    }
+
+    .skill-badge-yellow::before {
+        @apply dark:skill-badge-yellow-dark-background;
+        background: #736231;
+    }
+
+    .skill-badge-yellow-dark-background {
+        background: #f3d26e;
+    }
+
+    .skill-badge-green::before {
+        @apply bg-green-700 dark:skill-badge-green-dark-background;
+    }
+
+    .skill-badge-green-dark-background {
+        background: #00ff1c;
+    }
+
+    .divider::before {
+        content: '';
+        display: block;
+        width: 100%;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 1c-5 0-5 10-10 10S10 1 5 1 0 11-5 11-10 1-15 1' stroke='%23CBD5DF' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'/%3E%3C/svg%3E");
+        height: 12px;
+        background-repeat: repeat-x;
+        margin-bottom: 1.5rem;
+        margin-top: 4rem;
+    }
+}
