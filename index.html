@@ -205,61 +205,19 @@
 
                                             <section class="splide perpage-1 mt-4">
                                                 <div class="splide__track">
-                                                    <ul class="splide__list mt-5">
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/1.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/2.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/3.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/4.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/5.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/6.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/7.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                                    <ul
+                                                        class="splide__list mt-5"
+                                                        x-data="{ range: [...Array(10).keys()].map((i) => i + 1) }"
+                                                    >
+                                                        <template x-for="number in range">
+                                                            <li class="splide__slide">
+                                                                <img
+                                                                    src="data:image/png;base64,..."
+                                                                    x-bind:data-splide-lazy="`assets/images/royal-state/admin-panel/admin-${number}.png`"
+                                                                    alt=""
+                                                                />
+                                                            </li>
+                                                        </template>
                                                     </ul>
                                                 </div>
                                             </section>
@@ -270,61 +228,19 @@
 
                                             <section class="splide perpage-2 mt-4">
                                                 <div class="splide__track">
-                                                    <ul class="splide__list mt-5">
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/1.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/2.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/3.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/4.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/5.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/6.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/7.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                                    <ul
+                                                        class="splide__list mt-5"
+                                                        x-data="{ range: [...Array(3).keys()].map((i) => i + 1) }"
+                                                    >
+                                                        <template x-for="number in range">
+                                                            <li class="splide__slide">
+                                                                <img
+                                                                    src="data:image/png;base64,..."
+                                                                    x-bind:data-splide-lazy="`assets/images/royal-state/app/app-${number}.png`"
+                                                                    alt=""
+                                                                />
+                                                            </li>
+                                                        </template>
                                                     </ul>
                                                 </div>
                                             </section>
@@ -359,7 +275,9 @@
                                 </section>
 
                                 <section class="mt-5">
-                                    <h1 class="text-2xl font-semibold text-center dark:text-gray-200">سایت مشابه ایسام</h1>
+                                    <h1 class="text-2xl font-semibold text-center dark:text-gray-200">
+                                        سایت مشابه ایسام
+                                    </h1>
 
                                     <section class="mt-10">
                                         <p class="font-bold dark:text-gray-200">خلاصه امکانات سایت:</p>
@@ -396,131 +314,70 @@
                                     </section>
 
                                     <section class="mt-16 mb-3">
-                                        <section>
-                                            <p class="font-bold dark:text-gray-200">داشبورد:</p>
+                                        <section role="admin-panel">
+                                            <p class="font-bold dark:text-gray-200">پنل ادمین:</p>
 
                                             <section class="splide perpage-1 mt-4">
                                                 <div class="splide__track">
-                                                    <ul class="splide__list mt-5">
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/1.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/2.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/3.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/4.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/5.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/6.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/7.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                                    <ul
+                                                        class="splide__list mt-5"
+                                                        x-data="{ range: [...Array(22).keys()].map((i) => i + 1) }"
+                                                    >
+                                                        <template x-for="number in range">
+                                                            <li class="splide__slide">
+                                                                <img
+                                                                    src="data:image/png;base64,..."
+                                                                    x-bind:data-splide-lazy="`assets/images/esam/admin-panel/${number}.png`"
+                                                                    alt=""
+                                                                />
+                                                            </li>
+                                                        </template>
                                                     </ul>
                                                 </div>
                                             </section>
                                         </section>
 
-                                        <section class="mt-9">
-                                            <p class="font-bold dark:text-gray-200">صفحات اصلی سایت:</p>
+                                        <section class="mt-9" role="app">
+                                            <p class="font-bold dark:text-gray-200">سایت:</p>
 
                                             <section class="splide perpage-2 mt-4">
                                                 <div class="splide__track">
-                                                    <ul class="splide__list mt-5">
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/1.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/2.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                                    <ul
+                                                        class="splide__list mt-5"
+                                                        x-data="{ range: [...Array(5).keys()].map((i) => i + 1) }"
+                                                    >
+                                                        <template x-for="number in range">
+                                                            <li class="splide__slide">
+                                                                <img
+                                                                    src="data:image/png;base64,..."
+                                                                    x-bind:data-splide-lazy="`assets/images/esam/app/${number}.png`"
+                                                                    alt=""
+                                                                />
+                                                            </li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                        </section>
 
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/3.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                        <section class="mt-9" role="buy-process">
+                                            <p class="font-bold dark:text-gray-200">پروسه خرید:</p>
 
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/4.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/5.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/6.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
-
-                                                        <li class="splide__slide">
-                                                            <img
-                                                                src="data:image/png;base64,..."
-                                                                data-splide-lazy="assets/images/7.png"
-                                                                alt=""
-                                                            />
-                                                        </li>
+                                            <section class="splide perpage-1 mt-4">
+                                                <div class="splide__track">
+                                                    <ul
+                                                        class="splide__list mt-5"
+                                                        x-data="{ range: [...Array(5).keys()].map((i) => i + 1) }"
+                                                    >
+                                                        <template x-for="number in range">
+                                                            <li class="splide__slide">
+                                                                <img
+                                                                    src="data:image/png;base64,..."
+                                                                    x-bind:data-splide-lazy="`assets/images/esam/buy-process/${number}.png`"
+                                                                    alt=""
+                                                                />
+                                                            </li>
+                                                        </template>
                                                     </ul>
                                                 </div>
                                             </section>
@@ -571,19 +428,20 @@
                     </script>
                 </section>
             </footer>
-
         </section>
     </body>
 
     <script src="assets/vendor/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/vendor/splide/dist/js/splide.min.js" type="text/javascript"></script>
+    <script src="//unpkg.com/alpinejs"></script>
 
     <script type="text/javascript">
-        new Splide('.splide.perpage-1', {
+        let perpageOneOptions = {
             direction: 'rtl',
             autoplay: true,
             width: '70rem',
+            height: '40rem',
             lazyLoad: 'nearby',
             arrows: false,
             breakpoints: {
@@ -592,14 +450,14 @@
                 },
             },
             mediaQuery: 'min',
-        }).mount();
-
-        new Splide('.splide.perpage-2', {
+        };
+        let perpageTwoOptions = {
             direction: 'rtl',
             perPage: 1,
             gap: '1rem',
             autoplay: true,
             width: '70rem',
+            height: '45rem',
             lazyLoad: 'nearby',
             arrows: false,
             breakpoints: {
@@ -609,6 +467,12 @@
                 },
             },
             mediaQuery: 'min',
-        }).mount();
+        };
+
+        new Splide('[for=royalstate] .splide.perpage-1', perpageOneOptions).mount();
+        new Splide('[for=royalstate] .splide.perpage-2', perpageTwoOptions).mount();
+        new Splide('[for=esam] [role=admin-panel] .splide.perpage-1', perpageOneOptions).mount();
+        new Splide('[for=esam] [role=app] .splide.perpage-2', perpageTwoOptions).mount();
+        new Splide('[for=esam] [role=buy-process] .splide.perpage-1', perpageOneOptions).mount();
     </script>
 </html>
