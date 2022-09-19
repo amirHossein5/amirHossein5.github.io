@@ -470,20 +470,22 @@
             mediaQuery: 'min',
         };
 
-        let royalstateSliders = [];
-        let esamSliders = [];
+        let unmountedRoyalstateSliders = [];
+        let unmountedEsamSliders = [];
 
-        royalstateSliders.push(new Splide('[for=royalstate] .splide.perpage-1', perpageOneOptions));
-        royalstateSliders.push(new Splide('[for=royalstate] .splide.perpage-2', perpageTwoOptions));
-        esamSliders.push(new Splide('[for=esam] [role=admin-panel] .splide.perpage-1', perpageOneOptions));
-        esamSliders.push(new Splide('[for=esam] [role=app] .splide.perpage-2', perpageTwoOptions));
-        esamSliders.push(new Splide('[for=esam] [role=buy-process] .splide.perpage-1', perpageOneOptions));
+        unmountedRoyalstateSliders.push(new Splide('[for=royalstate] .splide.perpage-1', perpageOneOptions));
+        unmountedRoyalstateSliders.push(new Splide('[for=royalstate] .splide.perpage-2', perpageTwoOptions));
+        unmountedEsamSliders.push(new Splide('[for=esam] [role=admin-panel] .splide.perpage-1', perpageOneOptions));
+        unmountedEsamSliders.push(new Splide('[for=esam] [role=app] .splide.perpage-2', perpageTwoOptions));
+        unmountedEsamSliders.push(new Splide('[for=esam] [role=buy-process] .splide.perpage-1', perpageOneOptions));
 
         $('#esam .open-more-description').click(() => {
-            esamSliders.forEach((slider) => slider.mount());
+            unmountedEsamSliders.forEach((slider) => slider.mount());
+            unmountedEsamSliders = [];
         });
         $('#royalstate .open-more-description').click(() => {
-            royalstateSliders.forEach((slider) => slider.mount());
+            unmountedRoyalstateSliders.forEach((slider) => slider.mount());
+            unmountedRoyalstateSliders = [];
         });
     </script>
 </html>
